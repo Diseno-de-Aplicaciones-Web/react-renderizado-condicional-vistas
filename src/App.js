@@ -16,7 +16,7 @@ function App() {
     setRuta("/local/")
   }
 
-  function irARexsitro() {
+  function irARexistro() {
     setRuta("/rexistro/")
   }
 
@@ -27,7 +27,7 @@ function App() {
         <ul>
           <li onClick={irAPortada}>Portada</li>
           <li onClick={irALocal}>Local</li>
-          <li onClick={irARexsitro}>Rexistro</li>
+          <li onClick={irARexistro}>Rexistro</li>
         </ul>
       </nav>
       { ruta === "/" && <Portada/>}
