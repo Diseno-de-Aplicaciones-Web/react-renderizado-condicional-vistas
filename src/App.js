@@ -8,16 +8,10 @@ function App() {
 
   const [ruta, setRuta] = useState("/")
 
-  function irAPortada() {
-    setRuta("/")
-  }
-
-  function irALocal() {
-    setRuta("/local/")
-  }
-
-  function irARexistro() {
-    setRuta("/rexistro/")
+  function manexadorClick(evento) {
+    const elementoClickado = evento.target
+    const idElementoClickado = elementoClickado.id
+    setRuta(idElementoClickado)
   }
 
   return (
@@ -25,9 +19,9 @@ function App() {
       <h1>Periodico</h1>
       <nav>
         <ul>
-          <li onClick={irAPortada}>Portada</li>
-          <li onClick={irALocal}>Local</li>
-          <li onClick={irARexistro}>Rexistro</li>
+          <li id="/" onClick={manexadorClick}>Portada</li>
+          <li id="/local/" onClick={manexadorClick}>Local</li>
+          <li id="/rexistro/" onClick={manexadorClick}>Rexistro</li>
         </ul>
       </nav>
       { ruta === "/" && <Portada/>}
