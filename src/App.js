@@ -10,6 +10,8 @@ function App() {
     <>
       <h1>Periodico</h1>
 
+      <p><strong>Nota importante:</strong> para poder usar ReactRouter hemos de encerrar nuestra app en un uno de los routers proporcionado por la librería. Mira las lineas 6, 11 y 13 de `src/index.js`</p>
+
       <nav>
         <ul>
           <li><Link to={"/"}>Portada</Link></li>
@@ -17,7 +19,7 @@ function App() {
           <li><Link to={"/rexistro/"}>Rexistro</Link></li>
         </ul>
       </nav>
-      
+
       <Routes>
         <Route path='/' element={<Portada/>}/>
         <Route path='/local/' element={<Local/>}/>
